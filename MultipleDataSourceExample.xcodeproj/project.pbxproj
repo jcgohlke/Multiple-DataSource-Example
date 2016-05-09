@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DFD512541CE0C2960059071A /* ContainerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContainerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD512541CE0C2960059071A /* MultipleDataSourceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleDataSourceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD512571CE0C2960059071A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFD512591CE0C2960059071A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DFD5125C1CE0C2960059071A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		DFD5124B1CE0C2960059071A = {
 			isa = PBXGroup;
 			children = (
-				DFD512561CE0C2960059071A /* ContainerExample */,
+				DFD512561CE0C2960059071A /* MultipleDataSourceExample */,
 				DFD512551CE0C2960059071A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		DFD512551CE0C2960059071A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFD512541CE0C2960059071A /* ContainerExample.app */,
+				DFD512541CE0C2960059071A /* MultipleDataSourceExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFD512561CE0C2960059071A /* ContainerExample */ = {
+		DFD512561CE0C2960059071A /* MultipleDataSourceExample */ = {
 			isa = PBXGroup;
 			children = (
 				DFD512571CE0C2960059071A /* AppDelegate.swift */,
@@ -79,15 +79,16 @@
 				DFD512711CE1146B0059071A /* TeamCap.json */,
 				DFD512731CE118B20059071A /* TeamIronMan.json */,
 			);
+			name = MultipleDataSourceExample;
 			path = ContainerExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFD512531CE0C2960059071A /* ContainerExample */ = {
+		DFD512531CE0C2960059071A /* MultipleDataSourceExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFD512661CE0C2960059071A /* Build configuration list for PBXNativeTarget "ContainerExample" */;
+			buildConfigurationList = DFD512661CE0C2960059071A /* Build configuration list for PBXNativeTarget "MultipleDataSourceExample" */;
 			buildPhases = (
 				DFD512501CE0C2960059071A /* Sources */,
 				DFD512511CE0C2960059071A /* Frameworks */,
@@ -97,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = ContainerExample;
+			name = MultipleDataSourceExample;
 			productName = ContainerExample;
-			productReference = DFD512541CE0C2960059071A /* ContainerExample.app */;
+			productReference = DFD512541CE0C2960059071A /* MultipleDataSourceExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFD5124F1CE0C2960059071A /* Build configuration list for PBXProject "ContainerExample" */;
+			buildConfigurationList = DFD5124F1CE0C2960059071A /* Build configuration list for PBXProject "MultipleDataSourceExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -130,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFD512531CE0C2960059071A /* ContainerExample */,
+				DFD512531CE0C2960059071A /* MultipleDataSourceExample */,
 			);
 		};
 /* End PBXProject section */
@@ -276,7 +277,7 @@
 				INFOPLIST_FILE = ContainerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.ContainerExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MultipleDataSourceExample;
 			};
 			name = Debug;
 		};
@@ -287,14 +288,14 @@
 				INFOPLIST_FILE = ContainerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.ContainerExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MultipleDataSourceExample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFD5124F1CE0C2960059071A /* Build configuration list for PBXProject "ContainerExample" */ = {
+		DFD5124F1CE0C2960059071A /* Build configuration list for PBXProject "MultipleDataSourceExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFD512641CE0C2960059071A /* Debug */,
@@ -303,13 +304,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFD512661CE0C2960059071A /* Build configuration list for PBXNativeTarget "ContainerExample" */ = {
+		DFD512661CE0C2960059071A /* Build configuration list for PBXNativeTarget "MultipleDataSourceExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFD512671CE0C2960059071A /* Debug */,
 				DFD512681CE0C2960059071A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
