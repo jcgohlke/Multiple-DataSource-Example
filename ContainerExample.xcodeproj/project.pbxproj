@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		DFD512581CE0C2960059071A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD512571CE0C2960059071A /* AppDelegate.swift */; };
-		DFD5125A1CE0C2960059071A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD512591CE0C2960059071A /* ViewController.swift */; };
+		DFD5125A1CE0C2960059071A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD512591CE0C2960059071A /* BaseViewController.swift */; };
 		DFD5125D1CE0C2960059071A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD5125B1CE0C2960059071A /* Main.storyboard */; };
 		DFD5125F1CE0C2960059071A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD5125E1CE0C2960059071A /* Assets.xcassets */; };
 		DFD512621CE0C2960059071A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD512601CE0C2960059071A /* LaunchScreen.storyboard */; };
+		DFD5126C1CE102050059071A /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD5126B1CE102050059071A /* HeroTableViewCell.swift */; };
+		DFD5126E1CE102B90059071A /* TeamCapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD5126D1CE102B90059071A /* TeamCapDataSource.swift */; };
+		DFD512701CE111700059071A /* TeamIronManDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD5126F1CE111700059071A /* TeamIronManDataSource.swift */; };
+		DFD512721CE1146B0059071A /* TeamCap.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD512711CE1146B0059071A /* TeamCap.json */; };
+		DFD512741CE118B20059071A /* TeamIronMan.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD512731CE118B20059071A /* TeamIronMan.json */; };
+		DFD512761CE11AF50059071A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD512751CE11AF50059071A /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFD512541CE0C2960059071A /* ContainerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContainerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD512571CE0C2960059071A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFD512591CE0C2960059071A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFD512591CE0C2960059071A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DFD5125C1CE0C2960059071A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFD5125E1CE0C2960059071A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD512611CE0C2960059071A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFD512631CE0C2960059071A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD5126B1CE102050059071A /* HeroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		DFD5126D1CE102B90059071A /* TeamCapDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCapDataSource.swift; sourceTree = "<group>"; };
+		DFD5126F1CE111700059071A /* TeamIronManDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamIronManDataSource.swift; sourceTree = "<group>"; };
+		DFD512711CE1146B0059071A /* TeamCap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamCap.json; sourceTree = "<group>"; };
+		DFD512731CE118B20059071A /* TeamIronMan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamIronMan.json; sourceTree = "<group>"; };
+		DFD512751CE11AF50059071A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				DFD512571CE0C2960059071A /* AppDelegate.swift */,
-				DFD512591CE0C2960059071A /* ViewController.swift */,
+				DFD512591CE0C2960059071A /* BaseViewController.swift */,
+				DFD5126B1CE102050059071A /* HeroTableViewCell.swift */,
+				DFD5126D1CE102B90059071A /* TeamCapDataSource.swift */,
+				DFD5126F1CE111700059071A /* TeamIronManDataSource.swift */,
+				DFD512751CE11AF50059071A /* Hero.swift */,
 				DFD5125B1CE0C2960059071A /* Main.storyboard */,
 				DFD5125E1CE0C2960059071A /* Assets.xcassets */,
 				DFD512601CE0C2960059071A /* LaunchScreen.storyboard */,
 				DFD512631CE0C2960059071A /* Info.plist */,
+				DFD512711CE1146B0059071A /* TeamCap.json */,
+				DFD512731CE118B20059071A /* TeamIronMan.json */,
 			);
 			path = ContainerExample;
 			sourceTree = "<group>";
@@ -124,7 +142,9 @@
 			files = (
 				DFD512621CE0C2960059071A /* LaunchScreen.storyboard in Resources */,
 				DFD5125F1CE0C2960059071A /* Assets.xcassets in Resources */,
+				DFD512741CE118B20059071A /* TeamIronMan.json in Resources */,
 				DFD5125D1CE0C2960059071A /* Main.storyboard in Resources */,
+				DFD512721CE1146B0059071A /* TeamCap.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD5125A1CE0C2960059071A /* ViewController.swift in Sources */,
+				DFD5125A1CE0C2960059071A /* BaseViewController.swift in Sources */,
+				DFD512701CE111700059071A /* TeamIronManDataSource.swift in Sources */,
+				DFD5126E1CE102B90059071A /* TeamCapDataSource.swift in Sources */,
 				DFD512581CE0C2960059071A /* AppDelegate.swift in Sources */,
+				DFD5126C1CE102050059071A /* HeroTableViewCell.swift in Sources */,
+				DFD512761CE11AF50059071A /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

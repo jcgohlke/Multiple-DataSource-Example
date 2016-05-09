@@ -1,0 +1,26 @@
+ [
+  {
+    "name": "Captain America",
+    "powers": "super strength, agility, stamina"
+  },
+  {
+    "name": "Winter Soldier",
+    "powers": "super strength, prosthetic arm"
+  },
+  {
+    "name": "Falcon",
+    "powers": "flight with wingpack"
+  },
+  {
+    "name": "Hawkeye",
+    "powers": "master archer"
+  },
+  {
+    "name": "Scarlet Witch",
+    "powers": "hypnosis, telekinesis"
+  },
+  {
+    "name": "Ant-Man",
+    "powers": "size-changing suit, enhanced strength"
+  }
+]

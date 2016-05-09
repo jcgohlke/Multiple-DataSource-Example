@@ -1,0 +1,26 @@
+ [
+  {
+    "name": "Iron Man",
+    "powers": "electromechanical suit, flight, enhanced strength"
+  },
+  {
+    "name": "Black Widow",
+    "powers": "tactician, martial artist, electronic gauntlets"
+  },
+  {
+    "name": "War Machine",
+    "powers": "electromechanical suit, flight, enhanced strength"
+  },
+  {
+    "name": "Black Panther",
+    "powers": "vibranium suit, martial artist"
+  },
+  {
+    "name": "Vision",
+    "powers": "flight, shapeshifting, superhuman intelligence"
+  },
+  {
+    "name": "Spider-Man",
+    "powers": "enhanced agility/strength, precognitive sensing"
+  }
+]
