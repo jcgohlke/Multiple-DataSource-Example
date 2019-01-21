@@ -2,20 +2,14 @@
 //  Hero.swift
 //  ContainerExample
 //
-//  Created by Ben Gohlke on 5/9/16.
-//  Copyright © 2016 The Iron Yard. All rights reserved.
+//  Created by Ben Gohlke on 1/21/19.
+//  Copyright © 2019 Ben Gohlke. All rights reserved.
 //
 
 import Foundation
 
-class Hero
+struct Hero : Codable
 {
-    var name: String
-    var powers: String
-    
-    init(heroDictionary: NSDictionary)
-    {
-        name = heroDictionary["name"]! as! String
-        powers = heroDictionary["powers"]! as! String
-    }
+    let name: String
+    let powers: String
 }
