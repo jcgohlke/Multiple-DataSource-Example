@@ -16,6 +16,8 @@ class BaseViewController: UIViewController, UITableViewDelegate
     var secondWindow: UIWindow?
     var secondScreen: UIScreen?
     
+    var heroDetailVC: HeroDetailViewController?
+    
     let teamCap = CivilWarDataSource(for: "TeamCap")
     let teamIronMan = CivilWarDataSource(for: "TeamIronMan")
     
@@ -24,14 +26,16 @@ class BaseViewController: UIViewController, UITableViewDelegate
         super.viewDidLoad()
         heroesTableView.dataSource = teamCap
         title = "Civil War"
+        navigationController?.navigationBar.barTintColor = UIColor.green
+        navigationController?.navigationBar.tintColor = UIColor.white
         
         NotificationCenter.default.addObserver(self, selector: #selector(externalScreenDisconnected), name: UIScreen.didDisconnectNotification, object: nil)
     }
-
-    override func didReceiveMemoryWarning()
+    
+    override func viewDidAppear(_ animated: Bool)
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        super.viewDidAppear(animated)
+        heroDetailVC = nil
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl)
@@ -50,18 +54,28 @@ class BaseViewController: UIViewController, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let ds = heroesTableView.dataSource as? CivilWarDataSource,
-            let destinationVC = storyboard?.instantiateViewController(withIdentifier: "HeroDetailView") as? HeroDetailViewController
+        if let ds = heroesTableView.dataSource as? CivilWarDataSource
         {
-            destinationVC.hero = ds.hero(at: indexPath.row)
+            if heroDetailVC == nil {
+                heroDetailVC = storyboard?.instantiateViewController(withIdentifier: "HeroDetailView") as? HeroDetailViewController
+            }
+            
+            guard let heroDetailVC = heroDetailVC else { return }
+            
+            heroDetailVC.hero = ds.hero(at: indexPath.row)
             checkForSecondScreenAndReturnWindowIfPresent()
             if let secondWindow = secondWindow
             {
-                secondWindow.rootViewController = destinationVC
-                secondWindow.isHidden = false
+                if secondWindow.rootViewController != heroDetailVC
+                {
+                    secondWindow.rootViewController = heroDetailVC
+                    secondWindow.isHidden = false
+                } else {
+                    heroDetailVC.configureView()
+                }
             } else
             {
-                navigationController?.pushViewController(destinationVC, animated: true)
+                present(heroDetailVC, animated: true, completion: nil)
             }
         }
     }
@@ -88,8 +102,9 @@ class BaseViewController: UIViewController, UITableViewDelegate
     
     @objc func externalScreenDisconnected(notification: Notification)
     {
-        self.secondWindow?.isHidden = true
-        self.secondWindow = nil
-        self.secondScreen = nil
+        secondWindow?.isHidden = true
+        secondWindow = nil
+        secondScreen = nil
+        heroDetailVC = nil
     }
 }

@@ -10,11 +10,13 @@ import Foundation
 
 struct Hero : Codable
 {
+    let alias: String
     let name: String
     let powers: String
+    let summary: String
     
     func imageName() -> String
     {
-        return name.replacingOccurrences(of: " ", with: "-").lowercased()
+        return alias.replacingOccurrences(of: " ", with: "-").lowercased()
     }
 }

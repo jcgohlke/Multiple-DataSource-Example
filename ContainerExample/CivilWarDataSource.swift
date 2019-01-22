@@ -40,7 +40,7 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath as IndexPath) as! HeroTableViewCell
         
         let aHero = heroes[indexPath.row]
-        cell.heroNameLabel.text = aHero.name
+        cell.heroNameLabel.text = aHero.alias
         cell.powersLabel.text = aHero.powers
         
         return cell
@@ -54,7 +54,7 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
             if let heroList = try? JSONDecoder().decode([Hero].self, from: dataFromFile)
             {
                 heroes = heroList
-                heroes.sort(by: { $0.name < $1.name })
+                heroes.sort(by: { $0.alias < $1.alias })
             }
         }
     }
