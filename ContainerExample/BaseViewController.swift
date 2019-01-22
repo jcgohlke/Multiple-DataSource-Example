@@ -24,6 +24,8 @@ class BaseViewController: UIViewController, UITableViewDelegate
         super.viewDidLoad()
         heroesTableView.dataSource = teamCap
         title = "Civil War"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(externalScreenDisconnected), name: UIScreen.didDisconnectNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning()
@@ -78,5 +80,12 @@ class BaseViewController: UIViewController, UITableViewDelegate
             secWindow.screen = secondScreen
             secondWindow = secWindow
         }
+    }
+    
+    @objc func externalScreenDisconnected(notification: Notification)
+    {
+        self.secondWindow?.isHidden = true
+        self.secondWindow = nil
+        self.secondScreen = nil
     }
 }
