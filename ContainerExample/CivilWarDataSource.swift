@@ -12,7 +12,8 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
 {
     var heroes: [Hero]
     
-    override init() {
+    override init()
+    {
         heroes = [Hero]()
         super.init()
     }
@@ -20,9 +21,7 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
     convenience init?(for teamName: String?)
     {
         self.init()
-        guard let team = teamName else {
-            return
-        }
+        guard let team = teamName else { return }
         loadHeroes(from: team)
     }
     
@@ -50,8 +49,10 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
     func loadHeroes(from team: String)
     {
         let filePath = URL(fileURLWithPath: Bundle.main.path(forResource: team, ofType: "json")!)
-        if let dataFromFile = try? Data(contentsOf: filePath) {
-            if let heroList = try? JSONDecoder().decode([Hero].self, from: dataFromFile) {
+        if let dataFromFile = try? Data(contentsOf: filePath)
+        {
+            if let heroList = try? JSONDecoder().decode([Hero].self, from: dataFromFile)
+            {
                 heroes = heroList
                 heroes.sort(by: { $0.name < $1.name })
             }

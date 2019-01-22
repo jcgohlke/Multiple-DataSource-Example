@@ -47,17 +47,20 @@ class BaseViewController: UIViewController, UITableViewDelegate
         heroesTableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         tableView.deselectRow(at: indexPath, animated: true)
         if let ds = heroesTableView.dataSource as? CivilWarDataSource,
             let destinationVC = storyboard?.instantiateViewController(withIdentifier: "HeroDetailView") as? HeroDetailViewController
         {
             destinationVC.hero = ds.hero(at: indexPath.row)
             checkForSecondScreenAndReturnWindowIfPresent()
-            if let secondWindow = secondWindow {
+            if let secondWindow = secondWindow
+            {
                 secondWindow.rootViewController = destinationVC
                 secondWindow.isHidden = false
-            } else {
+            } else
+            {
                 navigationController?.pushViewController(destinationVC, animated: true)
             }
         }
@@ -65,8 +68,8 @@ class BaseViewController: UIViewController, UITableViewDelegate
     
     func checkForSecondScreenAndReturnWindowIfPresent()
     {
-        if secondScreen == nil,
-            UIScreen.screens.count > 1 {
+        if secondScreen == nil, UIScreen.screens.count > 1
+        {
             let secScreen = UIScreen.screens[1]
             secScreen.currentMode = secScreen.preferredMode
             secondScreen = secScreen
@@ -74,7 +77,8 @@ class BaseViewController: UIViewController, UITableViewDelegate
         
         guard let secondScreen = secondScreen else { return }
         
-        if secondWindow == nil {
+        if secondWindow == nil
+        {
             let bounds = secondScreen.bounds
             let secWindow = UIWindow(frame: bounds)
             secWindow.screen = secondScreen
