@@ -57,4 +57,9 @@ final class CivilWarDataSource : NSObject, UITableViewDataSource
             }
         }
     }
+    
+    func hero(at index: Int) -> Hero
+    {
+        return heroes[index]
+    }
 }

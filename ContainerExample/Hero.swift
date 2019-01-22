@@ -12,4 +12,9 @@ struct Hero : Codable
 {
     let name: String
     let powers: String
+    
+    func imageName() -> String
+    {
+        return name.replacingOccurrences(of: " ", with: "-").lowercased()
+    }
 }

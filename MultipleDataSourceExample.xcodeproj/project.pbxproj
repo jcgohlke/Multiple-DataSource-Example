@@ -17,6 +17,7 @@
 		DFD512721CE1146B0059071A /* TeamCap.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD512711CE1146B0059071A /* TeamCap.json */; };
 		DFD512741CE118B20059071A /* TeamIronMan.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD512731CE118B20059071A /* TeamIronMan.json */; };
 		DFD512761CE11AF50059071A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD512751CE11AF50059071A /* Hero.swift */; };
+		F38C500521F6BAA200F4321B /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C500421F6BAA200F4321B /* HeroDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DFD512711CE1146B0059071A /* TeamCap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamCap.json; sourceTree = "<group>"; };
 		DFD512731CE118B20059071A /* TeamIronMan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamIronMan.json; sourceTree = "<group>"; };
 		DFD512751CE11AF50059071A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		F38C500421F6BAA200F4321B /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				DFD5126B1CE102050059071A /* HeroTableViewCell.swift */,
 				0EED438621F65A47004876C4 /* CivilWarDataSource.swift */,
 				DFD512751CE11AF50059071A /* Hero.swift */,
+				F38C500421F6BAA200F4321B /* HeroDetailViewController.swift */,
 				DFD5125B1CE0C2960059071A /* Main.storyboard */,
 				DFD5125E1CE0C2960059071A /* Assets.xcassets */,
 				DFD512601CE0C2960059071A /* LaunchScreen.storyboard */,
@@ -112,7 +115,7 @@
 				TargetAttributes = {
 					DFD512531CE0C2960059071A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = Q4APG5KBUQ;
+						DevelopmentTeam = S25RE6SHJT;
 					};
 				};
 			};
@@ -157,6 +160,7 @@
 				DFD5125A1CE0C2960059071A /* BaseViewController.swift in Sources */,
 				0EED438721F65A47004876C4 /* CivilWarDataSource.swift in Sources */,
 				DFD512581CE0C2960059071A /* AppDelegate.swift in Sources */,
+				F38C500521F6BAA200F4321B /* HeroDetailViewController.swift in Sources */,
 				DFD5126C1CE102050059071A /* HeroTableViewCell.swift in Sources */,
 				DFD512761CE11AF50059071A /* Hero.swift in Sources */,
 			);
@@ -292,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q4APG5KBUQ;
+				DEVELOPMENT_TEAM = S25RE6SHJT;
 				INFOPLIST_FILE = ContainerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,7 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q4APG5KBUQ;
+				DEVELOPMENT_TEAM = S25RE6SHJT;
 				INFOPLIST_FILE = ContainerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
