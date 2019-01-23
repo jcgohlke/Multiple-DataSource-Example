@@ -10,22 +10,15 @@ import UIKit
 
 class BaseViewController: UIViewController, UITableViewDelegate
 {
-
     @IBOutlet weak var heroesTableView: UITableView!
     @IBOutlet weak var starkLogo: UIImageView!
     
     var secondWindow: UIWindow?
     var secondScreen: UIScreen?
-    
     var heroDetailVC: HeroDetailViewController?
     
     let teamCap = CivilWarDataSource(for: "TeamCap")
     let teamIronMan = CivilWarDataSource(for: "TeamIronMan")
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle
-    {
-        return .lightContent
-    }
     
     override func viewDidLoad()
     {
@@ -75,10 +68,15 @@ class BaseViewController: UIViewController, UITableViewDelegate
                 heroDetailVC = storyboard?.instantiateViewController(withIdentifier: "HeroDetailView") as? HeroDetailViewController
             }
             
-            guard let heroDetailVC = heroDetailVC else { return }
+            guard let heroDetailVC = heroDetailVC else {
+                assertionFailure("didSelectRow: Hero Detail VC should not be nil here")
+                return
+            }
             
             heroDetailVC.hero = ds.hero(at: indexPath.row)
+            
             checkForSecondScreenAndReturnWindowIfPresent()
+            
             if let secondWindow = secondWindow
             {
                 if secondWindow.rootViewController != heroDetailVC

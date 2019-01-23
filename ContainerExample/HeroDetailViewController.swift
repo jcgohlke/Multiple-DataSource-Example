@@ -10,7 +10,6 @@ import UIKit
 
 class HeroDetailViewController: UIViewController
 {
-    
     @IBOutlet weak var superNameLabel: UILabel!
     @IBOutlet weak var realNameLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -19,14 +18,9 @@ class HeroDetailViewController: UIViewController
     
     var hero: Hero?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         configureView()
     }
     
