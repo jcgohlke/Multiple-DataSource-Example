@@ -12,6 +12,7 @@ class BaseViewController: UIViewController, UITableViewDelegate
 {
 
     @IBOutlet weak var heroesTableView: UITableView!
+    @IBOutlet weak var starkLogo: UIImageView!
     
     var secondWindow: UIWindow?
     var secondScreen: UIScreen?
@@ -21,15 +22,29 @@ class BaseViewController: UIViewController, UITableViewDelegate
     let teamCap = CivilWarDataSource(for: "TeamCap")
     let teamIronMan = CivilWarDataSource(for: "TeamIronMan")
     
+    override var preferredStatusBarStyle: UIStatusBarStyle
+    {
+        return .lightContent
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         heroesTableView.dataSource = teamCap
-        title = "Civil War"
-        navigationController?.navigationBar.barTintColor = UIColor.green
-        navigationController?.navigationBar.tintColor = UIColor.white
+        title = "Roster"
+        
+        configureView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(externalScreenDisconnected), name: UIScreen.didDisconnectNotification, object: nil)
+    }
+    
+    func configureView()
+    {
+        navigationController?.navigationBar.barTintColor = UIColor(hue: 359/360, saturation: 40/100, brightness: 10/100, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = UIColor(hue: 359/360, saturation: 70/100, brightness: 80/100, alpha: 1.0)
+        navigationController?.navigationBar.barStyle = .black
+        starkLogo.image = UIImage(named: "stark-logo")?.withRenderingMode(.alwaysTemplate)
+        starkLogo.tintColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -75,7 +90,7 @@ class BaseViewController: UIViewController, UITableViewDelegate
                 }
             } else
             {
-                present(heroDetailVC, animated: true, completion: nil)
+                navigationController?.pushViewController(heroDetailVC, animated: true)
             }
         }
     }
